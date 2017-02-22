@@ -1,0 +1,15 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "Create Message">
+
+    <form action="/messageForm" method="post">
+       <div class="form-group">
+           <label>Message</label>
+           <textarea name="message" class="form-control" type="text"></textarea>
+       </div>
+
+        <button class="btn btn-primary" type="submit">
+            Post
+        </button>
+    </form>
+
+</@layout.myLayout>
