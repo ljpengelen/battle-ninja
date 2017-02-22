@@ -18,6 +18,7 @@ package conf;
 
 
 import controllers.MessageController;
+import controllers.UserController;
 import ninja.AssetsController;
 import ninja.Router;
 import ninja.application.ApplicationRoutes;
@@ -30,6 +31,9 @@ public class Routes implements ApplicationRoutes {
 
         router.GET().route("/message").with(MessageController::index);
         router.POST().route("/messageForm").with(MessageController::newPost);
+
+        router.GET().route("/user").with(UserController::index);
+        router.GET().route("/user/add").with(UserController::newUser);
 
         router.GET().route("/").with(ApplicationController::index);
         router.GET().route("/hello_world.json").with(ApplicationController::helloWorldJson);

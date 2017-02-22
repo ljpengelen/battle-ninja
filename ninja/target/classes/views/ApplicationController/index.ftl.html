@@ -6,4 +6,17 @@
 <p>${i18n("hello.world.json")}</p>
 <a href="/hello_world.json">Hello World Json</a>
 
+    <form action="/messageForm" method="post">
+       <div class="form-group">
+           <label>Message</label>
+           <textarea name="message" class="form-control" type="text"></textarea>
+       </div>
+
+        <button class="btn btn-primary" type="submit">
+            Post
+        </button>
+
+    </form>
+
+
 </@layout.myLayout>
